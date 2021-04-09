@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" sizes="48x48">
+    <link rel="bookmark" href="favicon.ico">
+    <title>Welcome to Jostro OS!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        body{
+            margin: 0;
+            width: 100vw;
+            background-color: #202225;
+        }
+        #main-container{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(bg.png);
+            background-size: cover;
+            background-position: center center;
+        }
+        #logo-container{
+            position: relative;
+            top: calc(35vh - 30px);
+            margin: 0;
+            text-align: center;
+        }
+        #logo{
+            font-size: 60px;
+            font-family: "Poppins";
+            color: transparent;
+            background: linear-gradient(-30deg, #b6359c, #ef0a6a);
+            -webkit-background-clip: text;
+        }
+        #download-container{
+            position: relative;
+            top: calc(50vh - 40px);
+            margin: 0;
+            text-align: center;
+        }
+        #download{
+            transition: 0.3s ease;
+            width: 250px;
+            height: 80px;
+            outline: none;
+            border: 0px solid transparent;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: "Poppins";
+            background-image: linear-gradient(-30deg, #b6359c, #ef0a6a);
+            cursor: pointer;
+        }
+        #download:hover{
+            box-shadow: 0px 0px 15px #ef0a6a;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div id="logo-container">
+            <span id="logo">Jostro</span>
+        </div>
+        <div id="download-container">
+            <button id="download" onclick="download()">Unsupported Browser</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("download").innerHTML = "Download";
+        var alreadyDownloaded = false;
+        function download(){
+            if (!alreadyDownloaded){
+                window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
+                document.getElementById("download").innerHTML = "Download Started";
+                alreadyDownloaded = true;
+            }else{
+                document.getElementById("download").innerHTML = "Nope, be patient XD";
+            }
+        }
+        console.log("Jostro OS by JoJo Autoboy. Artworks and website mainly by Fengzi.");
+        console.log("Just a simple credit, you know");
+    </script>
+</body>
+</html>
