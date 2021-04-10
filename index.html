@@ -6,115 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A lightweight alternative to Twister OS.">
     <meta name="keywords" content="jostro,jostros,jostroos,twister">
-    <link rel="shortcut icon" href="icons/favicon.ico" sizes="48x48">
-    <link rel="bookmark" href="icons/favicon.ico">
-    <title>Welcome to Jostro OS!</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-        body{
-            margin: 0;
-            width: 100%;
-            background-color: #202225;
-            overflow: hidden;
-        }
-        #main-container{
-            width: 100vw;
-            height: 100vh;
-            background-image: url(icons/bg.png);
-            background-size: cover;
-            background-position: center center;
-        }
-        #logo-container{
-            position: relative;
-            top: calc(35% - 30px);
-            margin: 0;
-            text-align: center;
-        }
-        #logo{
-            font-size: 60px;
-            font-family: "Poppins";
-            color: transparent;
-            background: linear-gradient(-30deg, #b6359c, #ef0a6a);
-            -webkit-background-clip: text;
-            cursor: default;
-        }
-        #download-container{
-            position: relative;
-            top: calc(50% - 35px);
-            margin: 0;
-            text-align: center;
-        }
-        .buttons{
-            transition: 0.3s ease;
-            width: 200px;
-            height: 70px;
-            margin: 10px;
-            outline: none;
-            border: 0px solid transparent;
-            border-radius: 20px;
-            color: #ffffff;
-            font-size: 18px;
-            font-family: "Poppins";
-            cursor: pointer;
-        }
-        #download{
-            background-image: linear-gradient(-30deg, #b6359c, #ef0a6a);
-        }
-        #download:hover{
-            box-shadow: 0px 0px 12px #ef0a6a;
-        }
-        #discord{
-            background-image: linear-gradient(-30deg, #4e5d94, #7289da);
-        }
-        #discord:hover{
-            box-shadow: 0px 0px 12px #7289da;
-        }
-        ::selection{
-            background-color: transparent;
-            color: #ffffff;
-        }
-        @media screen and (max-width: 600px) {
-            #main-container{
-                background-image: none;
-            }
-        }
-    </style>
+    <link rel="shortcut icon" href="favicon.ico" sizes="48x48">
+    <link rel="bookmark" href="favicon.ico">
+   
+<link rel="stylesheet" href="main.css">
+<title>Welcome to jostro os</title>
+
+<link rel="shortcut icon" type="image/png" href="maybe server icon.png"/>
+
 </head>
 <body>
-    <div id="main-container">
-        <div id="logo-container">
-            <span id="logo">Jostro</span>
-        </div>
-        <div id="download-container">
-            <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
-            <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
-        </div>
-    </div>
-    <script>
-        document.getElementById("download").innerHTML = "Download";
-        var alreadyDownloaded = false;
-        var secretNum = 0;
-        function download(){
-            if (!alreadyDownloaded){
-                window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
-                document.getElementById("download").innerHTML = "Download Started!";
-                alreadyDownloaded = true;
-            }else{
-                document.getElementById("download").innerHTML = "Nope, be patient XD";
-            }
-        }
-        function discord(){
-            window.open("https://discord.gg/jr469efBZM");
-        }
-        document.getElementById("logo").onclick = function(){
-            secretNum += 1;
-            if (secretNum == 10){
-                document.getElementById("logo").innerHTML = "ortsoJ";
-                document.getElementById("main-container").style.transform = "scaleX(-1)";
-            }
-        }
-        console.log("Jostro OS by JoJo Autoboy. Artworks and website mainly by Fengzi.");
-        console.log("Just a simple credit, you know");
-    </script>
+
+    <body>
+        <header>
+            <nav>
+                <ul class="topnav">
+                    <li class="logo"> <a href="index1.html"></a></li>
+                    <li class='mybutton' ><a href="INSTALL.html">How to install</a></li>
+                    <li class='mybutton' ><a href="index1.html">HOME</a></li>
+                    <li class='mybutton' ><a href="shot.html">SCREENSHOTS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <header class="home">
+                Welcome to Jostro OS    
+            </header>
+            <a class="mybutton" href="https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip">Download</a> 
+            </header>
+            <a class="mybutton" href="#middle">Learn more.</a>
+            
+            <section class="par" id="middle">
+                <style>
+
+                body {
+               background-color: #202225;
+                }
+                </style>
+                
+                <header>
+                    Hi!
+                </header>
+                <nav>
+                    Welcome , This website is made to disturbute Jostro OS which is a free OS for Raspberry pi 4. 
+                    Hope you will have a fun time with this OS. 
+                </nav>
+
+                <ul>
+                    <a class="mybutton" href="https://discord.gg/CQ6Tf9wQSV">Our Discord Server</a>
+                    <a class="mybutton" href="index1.html">Click Here to go back up</a>
+                </ul>
+
+            </section>
+        </section>
+
+<h6> <a class="mybutton" href="egg.html">egg</a> </h6>
 </body>
+
+<div><h6>eee time to credit for credits (me = moon1789,os dev =jojo autoboy,rpi news, 疯子鸭 )</div></h6>
+
+<footer>2021 Jostro OS</footer>
 </html>
