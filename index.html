@@ -13,8 +13,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
         body{
             margin: 0;
-            width: 100vw;
+            width: 100%;
             background-color: #202225;
+            overflow: hidden;
         }
         #main-container{
             width: 100vw;
@@ -25,7 +26,7 @@
         }
         #logo-container{
             position: relative;
-            top: calc(35vh - 30px);
+            top: calc(35% - 30px);
             margin: 0;
             text-align: center;
         }
@@ -39,7 +40,7 @@
         }
         #download-container{
             position: relative;
-            top: calc(50vh - 35px);
+            top: calc(50% - 35px);
             margin: 0;
             text-align: center;
         }
@@ -47,8 +48,7 @@
             transition: 0.3s ease;
             width: 200px;
             height: 70px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin: 10px;
             outline: none;
             border: 0px solid transparent;
             border-radius: 20px;
@@ -72,6 +72,11 @@
         ::selection{
             background-color: transparent;
             color: #ffffff;
+        }
+        @media screen and (max-width: 600px) {
+            #main-container{
+                background-image: none;
+            }
         }
     </style>
 </head>
