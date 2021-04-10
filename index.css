@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+}
+body{
+    width: 100%;
+    background-color: #202225;
+    overflow: hidden;
+    font-family: "Poppins";
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    color: #ef0a6a;
+}
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url("icons/jostro wallpaper.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+header{
+    padding-left: 12%;
+    padding-right: 12%;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+#bar{
+    list-style: none;
+    text-align: right;
+}
+li:first-child {
+    float: left; 
+    padding: 0;
+}
+li {
+    padding-top: calc(6vh - 18px);
+    display: inline-block;
+    padding-left: 3%;
+    font-size: 18px;
+}
+.now{
+    color: #ef0a6a;
+}
+#logo{
+    margin-left: calc(6vh*-1);
+    width: 18vw;
+    height: 12vh;
+    background-image: url("icons/jostro.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+#logo-container{
+    position: absolute;
+    top: calc(35% - 30px);
+    width: 100%;
+    text-align: center;
+}
+#text-logo{
+    font-size: 60px;
+    font-family: "Poppins";
+    color: transparent;
+    background: linear-gradient(-30deg, #b6359c, #ef0a6a);
+    -webkit-background-clip: text;
+    cursor: default;
+}
+#download-container{
+    position: absolute;
+    top: calc(55% - 35px);
+    width: 100%;
+    text-align: center;
+}
+.buttons{
+    transition: 0.3s ease;
+    width: 200px;
+    height: 70px;
+    margin: 10px;
+    outline: none;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+#download{
+    background-image: linear-gradient(-30deg, #b6359c, #ef0a6a);
+}
+#download:hover{
+    box-shadow: 0px 0px 12px #ef0a6a;
+}
+#discord{
+    background-image: linear-gradient(-30deg, #4e5d94, #7289da);
+}
+#discord:hover{
+    box-shadow: 0px 0px 12px #7289da;
+}
+#copyright{
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #eeeeee;
+}
+::selection{
+    background-color: transparent;
+    color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+    #main-container{
+        background-image: none;
+    }
+}
