@@ -19,7 +19,7 @@ a:hover{
 #main-container{
     width: 100vw;
     height: 100vh;
-    /* background-image: url("icons/jostro wallpaper.png"); */
+    background-image: url("icons/jostro wallpaper.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
