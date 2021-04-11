@@ -11,6 +11,7 @@
     <meta name="og:image" itemprop="image" content="https://jostroos.ml/icons/jostro.png">
     <link rel="shortcut icon" href="icons/favicon.ico" sizes="48x48">
     <link rel="bookmark" href="icons/favicon.ico">
+    <link href="common.css" rel="stylesheet" type="text/css">
     <link href="index.css" rel="stylesheet" type="text/css">
     <title>Welcome to Jostro OS!</title>
 </head>
@@ -19,11 +20,11 @@
         <header>
             <nav>
                 <ul id="bar">
-                    <li><a id="logo" href="https://jostroos.ml/"></a></li>
-                    <li><a class="now" href="index.html">Home</a></li>
-                    <li><a href="install.html">Install Instructions</a></li>
-                    <li><a href="screenshots.html">Screenshots</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a id="nav-logo" href="https://jostroos.ml/"></a></li>
+                    <li><a id="nav-home" class="now" href="index.html">Home</a></li>
+                    <li><a id="nav-install" href="install.html">Install Instructions</a></li>
+                    <li><a id="nav-screenshots" href="screenshots.html">Screenshots</a></li>
+                    <li><a id="nav-about" href="about.html">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,17 +34,22 @@
         <div id="download-container">
             <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
             <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
+            <button id="github" class="buttons" onclick="github()">View us on Github!</button>
         </div>
         <footer>
             <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
         </footer>
     </div>
     <script>
+        const navInstall = document.getElementById("nav-install");
         const mainContainer = document.getElementById("main-container");
         const textLogo = document.getElementById("text-logo");
         const downloadBtn = document.getElementById("download");
         var alreadyDownloaded = false;
         var secretNum = 0;
+        if (window.innerWidth <= 620){
+            navInstall.innerHTML = "Install";
+        }
         downloadBtn.innerHTML = "Download";
         function download(){
             if (!alreadyDownloaded){
@@ -56,6 +62,9 @@
         }
         function discord(){
             window.open("https://discord.gg/jr469efBZM");
+        }
+        function github(){
+            window.open("https://github.com/jostroOS/jostro");
         }
         textLogo.onclick = function(){
             secretNum += 1;

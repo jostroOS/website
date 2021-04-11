@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+}
+body{
+    width: 100%;
+    background-color: #202225;
+    overflow: hidden;
+    font-family: "Poppins";
+    color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    color: #ef0a6a;
+}
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url("icons/jostro wallpaper.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+header{
+    padding-left: 12%;
+    padding-right: 12%;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+#bar{
+    list-style: none;
+    text-align: right;
+}
+#nav-logo{
+    margin-left: calc(6vh*-1);
+    width: 18vw;
+    height: 12vh;
+    background-image: url("icons/jostro.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+li:first-child {
+    float: left; 
+    padding: 0;
+}
+li {
+    padding-top: calc(6vh - 18px);
+    display: inline-block;
+    padding-left: 3%;
+    font-size: 18px;
+}
+.now{
+    color: #ef0a6a;
+}
+#copyright{
+    position: absolute;
+    bottom: 12px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #eeeeee;
+}
+::selection{
+    background-color: transparent;
+    color: #ef0a6a;
+}
+
+@media screen and (max-width: 850px) {
+    li{
+        padding-left: 2%;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 620px) {
+    #main-container{
+        background-image: none;
+    }
+    li{
+        padding-left: 1%;
+        font-size: 12px;
+    }
+}
