@@ -60,11 +60,11 @@ header{
 #nav-logo:hover{
     margin-top: 0;
 }
-li:first-child {
+#bar li:first-child {
     float: left; 
     padding: 0;
 }
-li {
+#bar li {
     padding-top: calc(6vh - 18px);
     display: inline-block;
     padding-left: 3%;
