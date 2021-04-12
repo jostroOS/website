@@ -1,2 +1,1 @@
-
-Website for jostroOS
+# Official website for Jostro OS
