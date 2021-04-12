@@ -3,21 +3,28 @@
 }
 #logo-container{
     position: absolute;
-    top: calc(35% - 30px);
+    top: calc(33% - 30px);
     width: 100%;
     text-align: center;
 }
-#text-logo{
-    font-size: 60px;
+#text-logo, #slogan{
+    display: inline-block;
     font-family: "Poppins";
     color: transparent;
     background: linear-gradient(-30deg, #b6359c, #ef0a6a);
     -webkit-background-clip: text;
     cursor: default;
 }
+#text-logo{
+    font-size: 60px;
+}
+#slogan{
+    padding-top: 1vh;
+    font-size: 22px;
+}
 #download-container{
     position: absolute;
-    top: calc(55% - 35px);
+    top: calc(57% - 35px);
     width: 100%;
     text-align: center;
 }
@@ -55,17 +62,20 @@
 }
 @media screen and (max-width: 850px) {
     #logo-container{
-        top: calc(30% - 30px);
+        top: calc(28% - 30px);
     }
     #download-container{
-        top: calc(50% - 30px);
+        top: calc(52% - 30px);
     }
 }
 @media screen and (max-width: 620px) {
     #logo-container{
         top: calc(24% - 30px);
     }
+    #slogan{
+        padding-top: 0;
+    }
     #download-container{
-        top: calc(44% - 30px);
+        top: calc(50% - 30px);
     }
 }
