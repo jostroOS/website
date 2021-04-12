@@ -1,3 +1,6 @@
+#main-container{
+    height: 100vh;
+}
 #logo-container{
     position: absolute;
     top: calc(35% - 30px);
