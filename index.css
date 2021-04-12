@@ -3,7 +3,7 @@
 }
 #logo-container{
     position: absolute;
-    top: calc(33% - 30px);
+    top: calc(34% - 30px);
     width: 100%;
     text-align: center;
 }
@@ -24,7 +24,7 @@
 }
 #download-container{
     position: absolute;
-    top: calc(57% - 35px);
+    top: calc(56% - 35px);
     width: 100%;
     text-align: center;
 }
@@ -65,7 +65,7 @@
         top: calc(28% - 30px);
     }
     #download-container{
-        top: calc(52% - 30px);
+        top: calc(54% - 30px);
     }
 }
 @media screen and (max-width: 620px) {
@@ -74,6 +74,7 @@
     }
     #slogan{
         padding-top: 0;
+        font-size: 18px;
     }
     #download-container{
         top: calc(50% - 30px);
