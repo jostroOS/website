@@ -21,7 +21,7 @@
     line-height: 60px;
 }
 #slogan-container{
-    padding-top: 1%;
+    padding-top: 1.5%;
     padding-left: 12%;
     padding-right: 12%;
 }
@@ -32,7 +32,7 @@
 #download-container{
     /* position: absolute;
     top: calc(56% - 35px); */
-    padding-top: 2%;
+    padding-top: 1.5%;
     width: 100%;
     text-align: center;
 }
