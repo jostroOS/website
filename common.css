@@ -39,7 +39,6 @@ header{
     padding-right: 12%;
     box-sizing: border-box;
     background-color: transparent;
-    /* background-color: rgba(0,0,0,0.5); */
     z-index: 2;
 }
 #bar{
@@ -89,6 +88,9 @@ header{
 ::selection{
     background-color: transparent;
     color: #ef0a6a;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 @media screen and (max-width: 850px) {
     #bar li{
