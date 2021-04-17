@@ -149,9 +149,11 @@
         downloadBtn.innerHTML = "Download";
         function download(){
             if (!alreadyDownloaded){
-                window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
-                downloadBtn.innerHTML = "Download Started!";
-                alreadyDownloaded = true;
+                if (confirm("This build has a broken combination of 32 and 64 bit packages. Please use at your own risk. Continue anyway?")){
+                    window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
+                    downloadBtn.innerHTML = "Download Started!";
+                    alreadyDownloaded = true;
+                }            
             }else{
                 downloadBtn.innerHTML = "Nope, be patient XD";
             }
