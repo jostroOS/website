@@ -137,6 +137,8 @@
         </footer>
     </div>
     <script>
+        const title = document.getElementsByTagName("title")[0];
+        const navLogo = document.getElementById("nav-logo");
         const navInstall = document.getElementById("nav-install");
         const mainContainer = document.getElementById("main-container");
         const textLogo = document.getElementById("text-logo");
@@ -169,6 +171,8 @@
             if (secretNum == 10){
                 textLogo.innerHTML = "ortsoJ";
                 mainContainer.style.transform = "scaleX(-1)";
+                navLogo.style.backgroundImage = "url('icons/jastra.png')";
+                title.innerHTML = "SO ortsoJ";
             }
         }
         console.log("Jostro OS by JoJo Autoboy. Helping and testing by RPiNews. Artworks and website mainly by Fengzi.");
