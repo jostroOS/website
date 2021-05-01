@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A lightweight alternative to Raspberry Pi OS.">
+    <meta name="keywords" content="jostro,jostros,jostroos,jostro os,twister,raspberry pi os,raspbian,raspi,rpi">
+    <meta name="theme-color" content="#ef0a6a">
+    <meta property="og:site_name" content="Jostro OS">
+    <meta name="og:title" content="Home Page">
+    <meta name="og:description" content="A lightweight alternative to Raspberry Pi OS.">
+    <meta name="og:image" itemprop="image" content="https://jostroos.ml/icons/jostro.png">
+    <link rel="shortcut icon" href="icons/favicon.ico" sizes="48x48">
+    <link rel="bookmark" href="nav-logo.png">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <title>Jostro OS</title>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "http://jostroos.ml",
+          "logo": "http://jostroos.ml/icons/jostro.png"
+        }
+    </script>
+    <style>
+        #main-container{
+            height: 100vh;
+        }
+        #logo-container{
+            padding-top: calc(36vh - 30px);
+            width: 100%;
+            text-align: center;
+        }
+        #text-logo, #slogan{
+            display: inline-block;
+            font-family: "Poppins";
+            color: transparent;
+            background: linear-gradient(-30deg, #b6359c, #ef0a6a);
+            -webkit-background-clip: text;
+            cursor: default;
+        }
+        #text-logo{
+            font-size: 60px;
+            line-height: 60px;
+        }
+        #slogan-container{
+            padding-top: 1.5%;
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+        #slogan{
+            font-size: 22px;
+            line-height: 28px;
+        }
+        #download-container{
+            padding-top: 1.5%;
+            width: 100%;
+            text-align: center;
+        }
+        .buttons{
+            transition: 0.3s ease;
+            width: 200px;
+            height: 70px;
+            margin: 10px;
+            outline: none;
+            border: 0px solid transparent;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
+        }
+        #download{
+            background-image: linear-gradient(-30deg, #b6359c, #ef0a6a);
+        }
+        #download:hover{
+            box-shadow: 0px 0px 12px #ef0a6a;
+            font-size: 30px
+        }
+        #discord{
+            background-image: linear-gradient(-30deg, #4e5d94, #7289da);
+        }
+        #discord:hover{
+            box-shadow: 0px 0px 12px #7289da;
+            font-size: 22px
+        }
+        #github{
+            /* background-image: linear-gradient(-30deg, #22272E, #2D333B); */
+            background-image: linear-gradient(-30deg, #0D1117, #161B22);    
+        }
+        #github:hover{
+            box-shadow: 0px 0px 12px #0D1117;
+            font-size: 22px
+        }
+        @media screen and (max-width: 850px) {
+            #logo-container{
+                padding-top: calc(36vh - 60px);
+            }
+        }
+        @media screen and (max-width: 620px) {
+            #logo-container{
+                padding-top: calc(26vh - 60px);
+            }
+            #slogan{
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <nav>
+                <ul id="bar">
+                    <li><a id="nav-logo" href=""></a></li>
+                    <li><a id="nav-home" class="now" href="index.html">Home</a></li>
+                    <li><a id="nav-install" href="install.html">Install Instructions</a></li>
+                    <li><a id="nav-screenshots" href="screenshots.html">Screenshots</a></li>
+                    <li><a id="nav-about" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="logo-container">
+            <div id="text-logo-container">
+                <span id="text-logo">Jostro</span>
+            </div>
+            <div id="slogan-container">
+                <span id="slogan">A lighter alternative to Raspberry Pi OS.</span>
+            </div>
+        </div>
+        <div id="download-container">
+            <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
+            <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
+            <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
+        </div>
+        <footer>
+            <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const title = document.getElementsByTagName("title")[0];
+        const navLogo = document.getElementById("nav-logo");
+        const navInstall = document.getElementById("nav-install");
+        const mainContainer = document.getElementById("main-container");
+        const textLogo = document.getElementById("text-logo");
+        const downloadBtn = document.getElementById("download");
+        var alreadyDownloaded = false;
+        var secretNum = 0;
+        if (window.innerWidth <= 620){
+            navInstall.innerHTML = "Install";
+        }
+        downloadBtn.innerHTML = "Download";
+        function download(){
+            if (!alreadyDownloaded){
+                if (confirm("This build has a broken combination of 32 and 64 bit packages. Please use at your own risk. Continue anyway?")){
+                    window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
+                    downloadBtn.innerHTML = "Download Started!";
+                    alreadyDownloaded = true;
+                }            
+            }else{
+                downloadBtn.innerHTML = "Nope, be patient XD";
+            }
+        }
+        function discord(){
+            window.open("https://discord.gg/jr469efBZM");
+        }
+        function github(){
+            window.open("https://github.com/jostroOS");
+        }
+        textLogo.onclick = function(){
+            secretNum += 1;
+            if (secretNum == 10){
+                textLogo.innerHTML = "ortsoJ";
+                mainContainer.style.transform = "scaleX(-1)";
+                navLogo.style.backgroundImage = "url('icons/jastra.png')";
+                title.innerHTML = "SO ortsoJ";
+            }
+        }
+        console.log("Jostro OS by JoJo Autoboy. Helping and testing by RPiNews. Artworks and website mainly by Fengzi.");
+        console.log("Just a simple credit, you know");
+        console.log("This website is built on Fengzi Design Language");
+        console.log("Who knows what that means");
+    </script>
+</body>
+</html>
