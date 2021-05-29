@@ -171,12 +171,12 @@
             if (!alreadyDownloaded){
                 if (amogOS == true){
                     window.location.href = "https://github.com/jostroOS/amogOS/releases/download/1.3.0/AmogOSv1.3.0.xz";
-                    document.getElementById("download").innerHTML = "Download Started!";
+                    document.getElementById("download").innerHTML = "SHHHHHHHHHHH!";
                     alreadyDownloaded = true;
                 }else{
                     if (confirm("This build has a broken combination of 32 and 64 bit packages. Please use at your own risk. Continue anyway?")){
                         window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
-                        document.getElementById("download").innerHTML = "SHHHHHHHHHHH!";
+                        document.getElementById("download").innerHTML = "Download Started!";
                         alreadyDownloaded = true;
                     }
                 }   
@@ -211,7 +211,7 @@
             document.getElementById("nav-about").style.display = "none";
             document.getElementById("text-logo").style.lineHeight = "75px";
             document.getElementById("text-logo").innerHTML = "AmogOS";
-            document.getElementById("slogan").innerHTML = "A sus OS for <del>Asus PCs</del>";
+            document.getElementById("slogan").innerHTML = "A sus OS for Asus Pis";
             document.getElementById("copyright").innerHTML = "© 2021 AmogOS Project. All Suspiciousness Reserved.";
             document.getElementById("sus").style.marginRight = "-180px";
         }
@@ -219,10 +219,14 @@
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
             if (secretNum == 10){
-                document.getElementById("text-logo").innerHTML = "ortsoJ";
-                document.getElementById("main-container").style.transform = "scaleX(-1)";
-                document.getElementById("nav-logo").style.backgroundImage = "url('icons/jastra.png')";
-                document.getElementsByTagName("title")[0].innerHTML = "SO ortsoJ";
+                if (amogOS == true){
+                    alert("That's sus.");
+                }else{
+                    document.getElementById("text-logo").innerHTML = "ortsoJ";
+                    document.getElementById("main-container").style.transform = "scaleX(-1)";
+                    document.getElementById("nav-logo").style.backgroundImage = "url('icons/jastra.png')";
+                    document.getElementsByTagName("title")[0].innerHTML = "SO ortsoJ";
+                }
             }
         }
 
