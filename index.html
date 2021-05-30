@@ -206,8 +206,11 @@
             // document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
             document.getElementById("nav-logo").style.backgroundImage = "url(icons/sus.png)";
             document.getElementById("nav-home").innerHTML = "Back to Jostro";
-            document.getElementById("nav-install").style.display = "none";
-            document.getElementById("nav-screenshots").style.display = "none";
+            // document.getElementById("nav-install").style.display = "none";
+            // document.getElementById("nav-screenshots").style.display = "none";
+            // below is a easy fix that could easily break, but i'm just lazy
+            document.getElementsByTagName("li")[2].style.display = "none";
+            document.getElementsByTagName("li")[3].style.display = "none";
             document.getElementById("nav-about").href = "amogos.html";
             document.getElementById("text-logo").style.lineHeight = "75px";
             document.getElementById("text-logo").innerHTML = "AmogOS";
