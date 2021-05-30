@@ -193,7 +193,7 @@
         }
         function github(){
             if (amogOS == true){
-                window.opem("https://github.com/jostroOS/amogOS");
+                window.open("https://github.com/jostroOS/amogOS");
             }else{
                 window.open("https://github.com/jostroOS");
             }
@@ -204,14 +204,14 @@
             console.log("sus");
             document.getElementsByTagName("title")[0].innerHTML = "AmogOS";
             // document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
-            document.getElementById("nav-logo").style.backgroundImage = "url(sus.png)";
+            document.getElementById("nav-logo").style.backgroundImage = "url(icons/sus.png)";
             document.getElementById("nav-home").innerHTML = "Sus";
             document.getElementById("nav-install").style.display = "none";
             document.getElementById("nav-screenshots").style.display = "none";
-            document.getElementById("nav-about").style.display = "none";
+            document.getElementById("nav-about").href = "amogos.html";
             document.getElementById("text-logo").style.lineHeight = "75px";
             document.getElementById("text-logo").innerHTML = "AmogOS";
-            document.getElementById("slogan").innerHTML = "A sus OS for Asus Pis";
+            document.getElementById("slogan").innerHTML = "A sus OS for aSUS Pi";
             document.getElementById("copyright").innerHTML = "© 2021 AmogOS Project. All Suspiciousness Reserved.";
             document.getElementById("sus").style.marginRight = "-180px";
         }
