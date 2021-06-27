@@ -124,6 +124,27 @@
                 line-height: 24px;
             }
         }
+        #show{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            cursor: pointer;
+        }
+        #shade{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #rickroll{
+            position: absolute;
+            left: 10vw;
+            top: calc(50vh - 45vw/2);
+            width: 80vw;
+            height: 45vw;
+            border: 5px solid #ef0a6a;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +178,13 @@
             <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
         </footer>
     </div>
+    <div id="show" onclick="document.getElementById('copyright').innerHTML = 'You have no control over this situation.'">
+        <div id="shade"></div>
+        <video id="rickroll" preload="none">
+            <source src="rickroll.mp4" type="video/mp4">
+            Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you
+        </video>
+    </div>
     <script>
         var alreadyDownloaded = false;
         var secretNum = 0;
@@ -173,6 +201,17 @@
                     window.location.href = "https://github.com/jostroOS/amogOS/releases/download/1.4.0/amogOSv1-4-0.img.xz";
                     document.getElementById("download").innerHTML = "SHHHHHHHHHHH!";
                     alreadyDownloaded = true;
+                    const body = document.getElementsByTagName("body")[0];
+                    if (body.requestFullscreen){
+                        body.requestFullscreen();
+                    }else if (body.webkitRequestFullscreen){
+                        body.webkitRequestFullscreen();
+                    }
+                    function showImg(){
+                        document.getElementById("copyright").innerHTML = "You have no control over this situation.";
+                    }
+                    document.getElementById("show").style.display = "block";
+                    document.getElementById("rickroll").play();
                 }else{
                     if (confirm("This build has a broken combination of 32 and 64 bit packages. Please use at your own risk. Continue anyway?")){
                         window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.zip";
@@ -218,6 +257,7 @@
             document.getElementById("slogan").innerHTML = "A sus OS for aSUS Pi";
             document.getElementById("copyright").innerHTML = "© 2021 AmogOS Project. All Suspiciousness Reserved.";
             document.getElementById("sus").style.marginRight = "-180px";
+            document.getElementById("rickroll").load();
         }
 
         document.getElementById("text-logo").onclick = function(){
