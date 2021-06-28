@@ -180,10 +180,7 @@
     </div>
     <div id="show" onclick="document.getElementById('copyright').innerHTML = 'You have no control over this situation.'">
         <div id="shade"></div>
-        <video id="rickroll" preload="none">
-            <source src="rickroll.mp4" type="video/mp4">
-            Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you
-        </video>
+        <video id="rickroll" src="rickroll.mp4" preload="none">Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you</video>
     </div>
     <script>
         var alreadyDownloaded = false;
@@ -206,9 +203,6 @@
                         body.requestFullscreen();
                     }else if (body.webkitRequestFullscreen){
                         body.webkitRequestFullscreen();
-                    }
-                    function showImg(){
-                        document.getElementById("copyright").innerHTML = "You have no control over this situation.";
                     }
                     document.getElementById("show").style.display = "block";
                     document.getElementById("rickroll").play();
