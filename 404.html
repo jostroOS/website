@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jostro,jostros,jostroos,twister">
+    <meta name="theme-color" content="#b6359c">
+    <link rel="shortcut icon" href="icons/favicon.ico" sizes="48x48">
+    <link rel="bookmark" href="icons/favicon.ico">
+    <title>404 - Jostro OS</title>
+    <style>
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #202225;
+            overflow: hidden;
+        }
+        p{
+            width: 150%;
+            margin: 0;
+            margin-left: -25%;
+            margin-top: -25%;
+            text-align: center;
+            font-size: 128px;
+            color: #888888;
+            word-break: break-all;
+        }
+        #warning{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        ::selection{
+            color: #ffffff;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <span id="warning">Back to home page in 5...</span>
+    <p id="main">404 404 404 404 404 404 404 404 404 404 404 404 404 404 040 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 040 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404</p>
+    <script>
+        var countdown = 5;
+        setInterval(function(){
+            countdown -= 1;
+            document.getElementById("warning").innerHTML = "Back to home page in " + countdown + "...";
+            if (countdown == 0){
+                window.location.href = "https://jostroos.ml/";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
