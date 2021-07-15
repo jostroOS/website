@@ -85,11 +85,10 @@
         <div id="large-image"></div>
     </div>
     <script>
-        const navInstall = document.getElementById("nav-install");
         const show = document.getElementById("show");
         const largeImage = document.getElementById("large-image");
         if (window.innerWidth <= 620){
-            navInstall.innerHTML = "Install";
+            document.getElementById("nav-install").innerHTML = "Install";
         }
         var large = false;
         function showImg(imgNum){

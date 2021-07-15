@@ -2,3 +2,6 @@ https://www.jostroOS.ml/
 https://www.jostroOS.ml/install
 https://www.jostroOS.ml/screenshots
 https://www.jostroOS.ml/about
+https://www.jostroOS.ml/amogos
+https://www.jostroOS.ml/amogos/install
+https://www.jostroOS.ml/amogos/about
