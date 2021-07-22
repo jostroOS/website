@@ -228,7 +228,7 @@
             <div id="columns">
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
-                    <p>v1.5.0</p>
+                    <p>v1.6.0</p>
                     <p>Username: pi</p>
                     <p>Password: raspberry</p>
                     <br/>
@@ -273,7 +273,7 @@
             document.getElementById("rickroll").load();
         }
         document.getElementsByClassName("downloadButtons")[0].onclick = function(){
-            window.location.href = "https://github.com/jostroOS/amogOS/releases/download/1.5.0/amogOSv1-5-0.img.xz";
+            window.location.href = "https://github.com/jostroOS/AmogOS/releases/download/1.6.0/amogOSv1-6-0.img.xz";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -328,8 +328,8 @@
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
             if (secretNum == 10){
-                alert("That's sus.");
                 document.getElementById("slogan").innerHTML = "Among Us Sussy Baka.";
+                alert("That's sus.");
             }
         }
 
