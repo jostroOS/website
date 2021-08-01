@@ -313,7 +313,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.open("https://github.com/jostroOS/AmogOS/releases/download/x64-1.0.0/AmogOS-v1.0-x86_64.iso");
+            window.location.href = "https://github.com/jostroOS/AmogOS/releases/download/x64-1.0.0/AmogOS-v1.0-x86_64.iso";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
