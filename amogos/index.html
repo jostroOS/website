@@ -269,6 +269,7 @@
                     <p>v1.2.0</p>
                     <p>Username: amogos</p>
                     <p>Password: amogos</p>
+                    <br/>
                     <button id="button3" class="buttons downloadButtons">Direct Download</button>
                 </div>
             </div>
@@ -312,7 +313,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.location.href = "https://github.com/jostroOS/AmogOS/releases/tag/x64-1.2.0";
+            window.open("https://github.com/jostroOS/AmogOS/releases/tag/x64-1.2.0");
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
