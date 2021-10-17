@@ -276,7 +276,14 @@
                     <br/>
                     <button id="button3" class="buttons downloadButtons">Direct Download</button>
                 </div>
-            </div>
+                <div class="columns">
+                    <p class="column-title">x86_64 Version</p>
+                    <p>v1.4.0</p>
+                    <p>Username: amogos</p>
+                    <p>Password: amogos</p>
+                    <br/>
+                    <button id="button1" class="buttons downloadButtons">Torrent Download</button>
+                </div>
             </div>
         </div>
         <video id="rickroll" src="rickroll.mp4" preload="none" style="pointer-events: none;">Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you</video>
@@ -299,7 +306,7 @@
             document.getElementById("rickroll").load();
         }
         document.getElementsByClassName("downloadButtons")[0].onclick = function(){
-            window.location.href = "https://github.com/jostroOS/AmogOS/releases/download/1.6.0/amogOSv1-6-0.img.xz";
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -308,7 +315,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[1].onclick = function(){
-            window.location.href = "magnet:?xt=urn:btih:LPWYMFFHZEZBIQ5YMKCI4ETURTTZPGDO&dn=amogOSv1-6-0.img.xz&xl=1624519068&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce";
+            window.location.href = "magnet:?xt=urn:btih:LL2CGQIGMA64DFS7IFC2PCGM5CGL66OY&dn=AmogOSv1-7-0_armhf.img.xz&xl=1848855812&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -317,7 +324,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.open("https://github.com/jostroOS/AmogOS/releases/tag/x64-1.3.0");
+            window.open("https://github.com/jostroOS/AmogOS/releases/tag/x64-1.4.0");
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -325,6 +332,14 @@
             }
             startRickroll();
         }
+        document.getElementsByClassName("downloadButtons")[3].onclick = function(){
+            window.open("magnet:?xt=urn:btih:ASC5DDRUWXYAMM54WQG3CRXVYW5OF56K&dn=AmogOS-1.4.0-x86_64.iso&xl=1721018368&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce");
+            if (body.requestFullscreen){
+                body.requestFullscreen();
+            }else if (body.webkitRequestFullscreen){
+                body.webkitRequestFullscreen();
+            }
+            startRickroll();
         function discord(){
             window.open("https://discord.gg/6ut87Hqukr");
         }
