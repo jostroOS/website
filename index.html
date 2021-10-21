@@ -90,26 +90,6 @@
         #github:hover{
             box-shadow: 0px 0px 12px #0D1117;
         }
-        #sus{
-            transition: 0.3s ease;
-            position: fixed;
-            right: 18px;
-            bottom: 18px;
-            height: 48px;
-            margin-right: -180px;
-            padding: 12px;
-            outline: none;
-            background-image: linear-gradient(-30deg, #699999, #69ddcc);
-            color: #ffffff;
-            font-size: 12px;
-            border: none;
-            border-radius: 18px;
-            font-family: "Poppins";
-            cursor: pointer;
-        }
-        #sus:hover{
-            box-shadow: 0px 0px 9px #69ddcc;
-        }
         @media screen and (max-width: 850px) {
             #logo-container{
                 padding-top: calc(36vh - 60px);
@@ -155,7 +135,6 @@
             <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
             <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
         </div>
-        <button id="sus" onclick="window.location.href = 'amogos'">Looking for AmogOS?</button>
         <footer>
             <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
         </footer>
@@ -196,11 +175,6 @@
                 document.getElementsByTagName("title")[0].innerHTML = "SO ortsoJ";
             }
         }
-
-        // Because Yes.
-        setTimeout(function(){
-            document.getElementById("sus").style.marginRight = "0";
-        }, 1500);
 
         console.log("Jostro OS by JoJo Autoboy. Helping and testing by RPiNews. Artworks and website mainly by Fengzi.");
         console.log("Just a simple credit, you know");
