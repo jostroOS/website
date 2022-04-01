@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A lightweight alternative to Raspberry Pi OS.">
+    <meta name="description" content="A lightweight wayland alternative to Raspberry Pi OS.">
     <meta name="keywords" content="jostro,jostros,jostroos,jostro os,twister,raspberry pi os,raspbian,raspi,rpi">
     <meta name="theme-color" content="#ef0a6a">
     <meta property="og:site_name" content="Jostro OS">
@@ -34,7 +34,7 @@
         }
         #text-logo, #slogan{
             display: inline-block;
-            font-family: "Poppins";
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
             color: transparent;
             background: linear-gradient(-30deg, #b6359c, #ef0a6a);
             -webkit-background-clip: text;
@@ -58,37 +58,58 @@
             width: 100%;
             text-align: center;
         }
-        .buttons{
+       .buttons{
+
+        }
+
+        #download{
+            background-image: url("icons/download.png");
             transition: 0.3s ease;
-            width: 200px;
-            height: 70px;
+            width: 400px;
+            height: 170px;
             margin: 10px;
             outline: none;
             border: 0px solid transparent;
-            border-radius: 20px;
             color: #ffffff;
             font-size: 18px;
             font-family: "Poppins";
             cursor: pointer;
         }
-        #download{
-            background-image: linear-gradient(-30deg, #b6359c, #ef0a6a);
-        }
         #download:hover{
             box-shadow: 0px 0px 12px #ef0a6a;
         }
         #discord{
-            background-image: linear-gradient(-30deg, #4e5d94, #7289da);
+            background-image: url("icons/joindiscord.png");
+            transition: 0.3s ease;
+            width: 447px;
+            height: 190px;
+            margin: 10px;
+            outline: none;
+            border: 0px solid transparent;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
         }
         #discord:hover{
             box-shadow: 0px 0px 12px #7289da;
         }
         #github{
             /* background-image: linear-gradient(-30deg, #22272E, #2D333B); */
-            background-image: linear-gradient(-30deg, #0D1117, #161B22);    
+            background-image: url("icons/github.png");    
+                        transition: 0.3s ease;
+            width: 270px;
+            height: 190px;
+            margin: 10px;
+            outline: none;
+            border: 0px solid transparent;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
         }
         #github:hover{
-            box-shadow: 0px 0px 12px #0D1117;
+            box-shadow: 0px 0px 12px #00ff32;
         }
         @media screen and (max-width: 850px) {
             #logo-container{
@@ -107,6 +128,22 @@
                 line-height: 24px;
             }
         }
+        #show{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        #rickroll{
+            display: none;
+            position: absolute;
+            left: 10vw;
+            top: calc(50vh - 45vw/2);
+            width: 80vw;
+            height: 45vw;
+            z-index: 69;
+        }
     </style>
 </head>
 <body>
@@ -115,55 +152,69 @@
             <nav>
                 <ul id="bar">
                     <li><a id="nav-logo" href="https://jostroos.ml/"></a></li>
-                    <li><a id="nav-home" class="now" href="index.html">Home</a></li>
-                    <li><a id="nav-install" href="install.html">Install Instructions</a></li>
-                    <li><a id="nav-screenshots" href="screenshots.html">Screenshots</a></li>
-                    <li><a id="nav-about" href="about.html">About</a></li>
+                    <li><a id="nav-home" class="now" href="index.html">Hgome</a></li>
+                    <li><a id="nav-install" href="install.html">Instll Insturctions</a></li>
+                    <li><a id="nav-screenshots" href="screenshots.html">Screeenbsgots</a></li>
+                    <li><a id="nav-about" href="about.html">Abount</a></li>
                 </ul>
             </nav>
         </header>
         <div id="logo-container">
             <div id="text-logo-container">
-                <span id="text-logo">Jostro</span>
+                <span id="text-logo">Jostro 2.0</span>
             </div>
             <div id="slogan-container">
-                <span id="slogan">A lighter alternative to Raspberry Pi OS.</span>
+                <span id="slogan">A heaver surfaceflinger alternative to Mac OS On Raspberry Pi.</span>
             </div>
         </div>
         <div id="download-container">
-            <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
-            <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
-            <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
-        </div>
+            <button id="download" class="buttons" onclick="download()"></button>
+            <button id="discord" class="buttons" onclick="discord()"></button>
+            <button id="github" class="buttons" onclick="github()"></button>
         <footer>
-            <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
+            <p id="copyright">© 2077 Jostro Inc. All Wrongs Reserved.</p>
         </footer>
     </div>
+    <div id="show">
+        <video id="rickroll" src="rickroll.mp4" preload="metadata" style="pointer-events: none;">darn</video>
+    </div>
+    </div>
     <script>
+        const body = document.getElementsByTagName("body")[0];
         var alreadyDownloaded = false;
         var secretNum = 0;
 
         if (window.innerWidth <= 620){
             document.getElementById("nav-install").innerHTML = "Install";
         }
-        document.getElementById("download").innerHTML = "Download";
+        document.getElementById("download").innerHTML = "";
 
         function download(){
             if (!alreadyDownloaded){
-                if (confirm("This build has a broken combination of 32 and 64 bit packages. Please use at your own risk. Continue anyway?")){
-                    window.location.href = "https://github.com/jostroOS/jostro/releases/download/1.1/jostroV1.1.img.xz";
-                    document.getElementById("download").innerHTML = "Download Started!";
+                if (confirm("This build has a working combination of 8 and 16 bit packages. Please use at your benefit. Leave anyway?")){
                     alreadyDownloaded = true;
+                    if (body.requestFullscreen){
+                        body.requestFullscreen();
+                    }else if (body.webkitRequestFullscreen){
+                        body.webkitRequestFullscreen();
+                    }
+                    document.getElementById("rickroll").style.display = "block";
+                    document.getElementById("rickroll").play();
+                    setTimeout(function(){
+                        window.onclick = function(){
+                            document.getElementById("copyright").innerHTML = "You have no control over this situation.";
+                        }
+                    }, 100);
                 }
             }else{
                 document.getElementById("download").innerHTML = "Nope, be patient XD";
             }
         }
         function discord(){
-            window.open("https://discord.gg/jr469efBZM");
+            window.open("https://github.com/jostroOS");
         }
         function github(){
-            window.open("https://github.com/jostroOS");
+            window.open("https://discord.gg/jr469efBZM");
         }
 
         document.getElementById("text-logo").onclick = function(){

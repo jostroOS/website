@@ -47,9 +47,9 @@
         }
         #large-image{
             position: absolute;
-            left: 10vw;
+            left: 20vw;
             top: calc(50vh - 45vw/2);
-            width: 80vw;
+            width: 55vw;
             height: 45vw;
             border: 5px solid #ef0a6a;
             background-size: contain;
@@ -64,20 +64,20 @@
             <nav>
                 <ul id="bar">
                     <li><a id="nav-logo" href="https://jostroos.ml/"></a></li>
-                    <li><a id="nav-home" href="index.html">Home</a></li>
-                    <li><a id="nav-install" href="install.html">Install Instructions</a></li>
-                    <li><a id="nav-screenshots" class="now" href="screenshots.html">Screenshots</a></li>
-                    <li><a id="nav-about" href="about.html">About</a></li>
+                    <li><a id="nav-home" href="index.html">Hgome</a></li>
+                    <li><a id="nav-install" href="install.html">Instll Insturctions</a></li>
+                    <li><a id="nav-screenshots" class="now" href="screenshots.html">Screeenbsgots</a></li>
+                    <li><a id="nav-about" href="about.html">Abount</a></li>
                 </ul>
             </nav>
         </header>
         <div id="text-area">
-            <h1>Screenshots</h1>
-            <h3 id="description">Real screenshots captured on Jostro OS.</h3>
-            <img id="img1" src="screenshots/1.png" alt="OOF This should be a screenshot, but it can't load." onclick="showImg(1)">
+            <h1>Screeenbsgots</h1>
+            <h3 id="description">Fake screeenbsgots captured on Jostro OS 2.0.</h3>
+            <img id="img1" src="screenshots/1.jpeg" alt="OOF This should be a screenshot, but it can't load." onclick="showImg(1)">
         </div>
         <footer>
-            <p id="copyright">© 2021 Jostro Project. All Rights Reserved.</p>
+            <p id="copyright">© 2077 Jostro Inc. All Wrongs Reserved.</p>
         </footer>
     </div>
     <div id="show" onclick="showImg()">
@@ -93,7 +93,7 @@
         var large = false;
         function showImg(imgNum){
             if (!large && imgNum){
-                largeImage.style.backgroundImage= "url('screenshots/" + imgNum + ".png')";
+                largeImage.style.backgroundImage= "url('screenshots/" + imgNum + ".webp')";
                 show.style.display = "block";
                 large = true;
             }else{

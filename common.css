@@ -4,14 +4,14 @@
 }
 body{
     width: 100%;
-    background-color: #202225;
-    font-family: "Poppins";
+    background-color: #fff;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     color: #ffffff;
     /* overflow-x: hidden; */
 }
 a{
     text-decoration: none;
-    color: #ffffff;
+    color: #ef0a6a;
 }
 a:hover{
     color: #ef0a6a;
@@ -22,11 +22,12 @@ a:hover{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("icons/jostro wallpaper.png");
+    background-color: #654321;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
+
 #main-container{
     width: 100vw;
 }
@@ -51,7 +52,7 @@ header{
     margin-top: -6%;
     width: 18vw;
     height: 12vh;
-    background-image: url("icons/nav-logo.png");
+    background-image: url("icons/jastra.png");
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
